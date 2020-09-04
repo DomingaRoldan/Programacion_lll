@@ -46,7 +46,8 @@
                         android:text="Conversor Universal"
                         android:background="#E1774B"
                         android:textStyle="bold"
-                        android:textColor="#fff"
+
+                        android:textColor="#ffff"
                         android:textSize="24dp" />
 
                     <EditText
