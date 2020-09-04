@@ -1,11 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    
+    <TabHost
+        android:id="@+id/parcial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" ></TabWidget>
+
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E1774B">
+
+                <LinearLayout
+                    android:id="@+id/Universal"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#7FC2C2"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="94dp"
+                        android:gravity="center"
+                        android:text="Conversor Universal"
+                        android:background="#E1774B"
+                        android:textColor="#fff"
+                        android:textSize="24dp" />
+
+                    <EditText
+                        android:id="@+id/editUnit1"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="1dp"
+
+                        android:hint="Unidades" />
+
+                    <EditText
+                        android:id="@+id/editUnit2"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="1dp"
+
+                        android:hint="Unidades" />
+
+                    <EditText
+                        android:id="@+id/editValor"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="1dp"
+
+                        android:hint="Valor" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Resultado" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/Area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F4DB60"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#fff"
+                        android:textSize="24dp"
+                        android:gravity="center"
+                        android:text="Area" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </TabHost>
+
+
+</LinearLayout>
