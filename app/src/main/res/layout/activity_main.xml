@@ -45,6 +45,7 @@
                         android:gravity="center"
                         android:text="Conversor Universal"
                         android:background="#E1774B"
+                        android:textStyle="bold"
                         android:textColor="#fff"
                         android:textSize="24dp" />
 
