@@ -6,13 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TabHost
+        android:id="@+id/parcial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" ></TabWidget>
+
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E1774B">
+
+                <LinearLayout
+                    android:id="@+id/Universal"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#7FC2C2"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="94dp"
+                        android:gravity="center"
+                        android:text="Conversor Universal"
+                        android:background="#E1774B"
+                        android:textStyle="bold"
+
+                        android:textColor="#ffff"
+                        android:textSize="24dp" />
+
+                    <EditText
+                        android:id="@+id/editUnit1"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="1dp"
+
+                        android:hint="Unidades" />
+
+                    <EditText
+                        android:id="@+id/editUnit2"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="1dp"
+
+                        android:hint="Unidades" />
+
+                    <EditText
+                        android:id="@+id/editValor"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="1dp"
+
+                        android:hint="Valor" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Resultado" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/Area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F4DB60"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="#fff"
+                        android:textSize="24dp"
+                        android:gravity="center"
+                        android:text="Area" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </TabHost>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
