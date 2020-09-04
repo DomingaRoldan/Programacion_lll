@@ -41,7 +41,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="94dp"
+                        android:layout_height="70dp"
                         android:gravity="center"
                         android:text="Conversor Universal"
                         android:background="#E1774B"
@@ -84,7 +84,8 @@
                         android:id="@+id/button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Resultado" />
+                        android:text="Resultado"
+                        android:backgroundTint="#F4DB60"/>
 
 
                 </LinearLayout>
@@ -99,11 +100,82 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="70dp"
                         android:textColor="#fff"
                         android:textSize="24dp"
                         android:gravity="center"
-                        android:text="Area" />
+                        android:text="Conversor de Area"
+                        android:background="#E1774B"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textVAreaActual"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:accessibilityHeading="false"
+                        android:gravity="center"
+                        android:text="Area Actual"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/AreaActual"
+                        android:layout_width="158dp"
+                        android:layout_height="45dp"
+                        android:accessibilityHeading="false"
+                        android:dropDownWidth="wrap_content"
+                        android:gravity="left" />
+
+                    <TextView
+                        android:id="@+id/textVAreaCambio"
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:gravity="center"
+                        android:text="Area de Cambio"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/AreaCambio"
+                        android:layout_width="161dp"
+                        android:layout_height="43dp"
+                        android:entries="@array/Area" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Resultado de Cambio"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTvalorCambio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="numberDecimal" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonprocesarCambio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#7FC2C2"
+                            android:onClick="clickConvertir"
+                            android:text="Procesar Cambio" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textVresultado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Resultado de Cambio"
+                        android:textSize="18sp" />
+
 
                 </LinearLayout>
 

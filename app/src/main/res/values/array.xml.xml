@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Area">
+        <item>PIE CUADRADO</item>
+        <item>VARA CUADRADA</item>
+        <item>YARDA CUADRADA</item>
+        <item>METRO CUADRADO</item>
+        <item>TAREAS</item>
+        <item>MANZANA</item>
+        <item>HECTAREA</item>
+
+    </string-array>
+</resources>
