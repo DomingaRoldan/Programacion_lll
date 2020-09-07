@@ -46,46 +46,58 @@
                         android:text="Conversor Universal"
                         android:background="#E1774B"
                         android:textStyle="bold"
-
                         android:textColor="#ffff"
                         android:textSize="24dp" />
 
-                    <EditText
-                        android:id="@+id/editUnit1"
-                        android:layout_width="180dp"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginTop="1dp"
-
-                        android:hint="Unidades" />
-
-                    <EditText
-                        android:id="@+id/editUnit2"
-                        android:layout_width="180dp"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginTop="1dp"
-
-                        android:hint="Unidades" />
-
-                    <EditText
-                        android:id="@+id/editValor"
-                        android:layout_width="180dp"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginTop="1dp"
-
-                        android:hint="Valor" />
-
-                    <Button
-                        android:id="@+id/button"
+                    <TextView
+                        android:id="@+id/textView1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Resultado"
-                        android:backgroundTint="#F4DB60"/>
+                        android:text="Unidades" />
+
+                    <EditText
+                        android:id="@+id/txtMonto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+
+
+
+                         />
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Unidades por caja " />
+
+                    <EditText
+                        android:id="@+id/txtCantidadCaja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+
+                        />
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cajas / Unidades " />
+
+                    <EditText
+                        android:id="@+id/txtResultado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+
+                       />
+
+                    <Button
+                        android:id="@+id/btnConvertir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="#F4DB60"
+                        android:text="@string/convertir" />
 
 
                 </LinearLayout>
