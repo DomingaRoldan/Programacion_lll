@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtMonto, txtCantidadC, txtRes;
     private Button btnConvertir;
 
-    final String[] datos = new String[]{"PIE CUADRADO","VARA CUADRADA","YARDA CUADRADO","METRO CUADRADO","TAREAS","MANZANA","HECTAREA"};
+    final String[] datos = new String[]{"PIE CUADRADO","VARA CUADRADA","YARDA CUADRADA","METRO CUADRADO","TAREAS","MANZANA","HECTAREA"};
 
     private Spinner AreaActual;
     private Spinner AreaCambio;
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
                    if (cambiomonda.equals("METRO CUADRADO")) {
                        resultadoconver = valorCambio / 10.764;
                    }
-                   if (cambiomonda.equals("TAREA")) {
+                   if (cambiomonda.equals("TAREAS")) {
                        resultadoconver = valorCambio * 0.00014775;
                    }
                    if (cambiomonda.equals("MANZANA")) {
@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
                    if (cambiomonda.equals("METRO CUADRADO")) {
                        resultadoconver = valorCambio * 0.70258205;
                    }
-                   if (cambiomonda.equals("TAREA")) {
+                   if (cambiomonda.equals("TAREAS")) {
                        resultadoconver = valorCambio * 0.001117;
                    }
                    if (cambiomonda.equals("MANZANA")) {
@@ -216,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
                    if (cambiomonda.equals("METRO CUADRADO")) {
                        resultadoconver = valorCambio / 1.196;
                    }
-                   if (cambiomonda.equals("TAREA")) {
+                   if (cambiomonda.equals("TAREAS")) {
                        resultadoconver = valorCambio * 438.94428;
                    }
                    if (cambiomonda.equals("MANZANA")) {
@@ -239,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
                    if (cambiomonda.equals("YARDA CUADRADA")) {
                        resultadoconver = valorCambio * 1.196;
                    }
-                   if (cambiomonda.equals("TAREA")) {
+                   if (cambiomonda.equals("TAREAS")) {
                        resultadoconver = valorCambio / 0.1590179054;
                    }
                    if (cambiomonda.equals("MANZANA")) {
@@ -251,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
 
                    break;
 
-               case "TAREA":
+               case "TAREAS":
 
                    if (cambiomonda.equals("PIE CUADRADO")) {
                        resultadoconver = valorCambio * 6768.34687003;
@@ -288,7 +288,7 @@ public class MainActivity extends AppCompatActivity {
                    if (cambiomonda.equals("METRO CUADRADO")) {
                        resultadoconver = valorCambio * 6.972;
                    }
-                   if (cambiomonda.equals("TAREA")) {
+                   if (cambiomonda.equals("TAREAS")) {
                        resultadoconver = valorCambio * 15.90331;
                    }
                    if (cambiomonda.equals("HECTAREA")) {
@@ -311,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
                    if (cambiomonda.equals("METRO CUADRADO")) {
                        resultadoconver = valorCambio * 10000;
                    }
-                   if (cambiomonda.equals("TAREA")) {
+                   if (cambiomonda.equals("TAREAS")) {
                        resultadoconver = valorCambio * 0;
                    }
                    if (cambiomonda.equals("MANZANA")) {
