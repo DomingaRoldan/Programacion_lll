@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".agregarProductos">
+
+    <ImageView
+        android:id="@+id/imgFotoProducto"
+        android:layout_width="300dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:background="@android:color/background_dark"
+        />
+    <EditText
+        android:id="@+id/txtCodigo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="180dp"
+        android:hint="codigo"/>
+    <EditText
+        android:id="@+id/txtDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="260dp"
+        android:hint="descripcio"/>
+    <EditText
+        android:id="@+id/txtMarca"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="330dp"
+        android:hint="marca"/>
+
+    <EditText
+        android:id="@+id/txtPresentacion"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="415dp"
+        android:hint="presentacion" />
+
+    <EditText
+        android:id="@+id/txtPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="485dp"
+        android:hint="precio" />
+
+    <Button
+        android:id="@+id/btnGuardarProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="590dp"
+        android:text="Guardar Amigos"/>
+    <Button
+        android:id="@+id/btnMostrarProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="645dp"
+        android:text="Mostrar Amigos"/>
+
+</RelativeLayout>
