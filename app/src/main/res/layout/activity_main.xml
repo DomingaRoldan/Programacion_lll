@@ -6,7 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ListView
+        android:id="@+id/ltsProducto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="25dp"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dp" />
 
 </RelativeLayout>
 
