@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btnAgregarProducto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                agregarAmigo("nuevo", new String[]{});
+               agregarAmigo("nuevo", new String[]{});
             }
         });
         obtenerDatosProductos();
