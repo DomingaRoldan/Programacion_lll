@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IniciarSesion"></activity>
-        <activity android:name=".RegistroActivity" />
+        <activity android:name=".IniciarSesion">
+
+        </activity>
+
+        <activity android:name=".MainActivity" />
+
         <activity android:name=".agregarProductos" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".RegistroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

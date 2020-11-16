@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="260dp"
-        android:hint="descripcio"/>
+        android:hint="descripcion"/>
     <EditText
         android:id="@+id/txtMarca"
         android:layout_width="match_parent"
@@ -52,12 +52,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="590dp"
-        android:text="Guardar Amigos"/>
+        android:text="Guardar Producto"/>
     <Button
         android:id="@+id/btnMostrarProducto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="645dp"
-        android:text="Mostrar Amigos"/>
+        android:text="Mostrar Producto"/>
 
 </RelativeLayout>
