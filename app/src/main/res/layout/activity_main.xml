@@ -24,8 +24,17 @@
         android:src="@android:drawable/ic_input_add"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_marginBottom="100dp"
         android:layout_margin="16dp"
         android:clickable="true"/>
+
+    <Button
+        android:id="@+id/btnchat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="660dp"
+        android:layout_marginLeft="240dp"
+        android:text="chat"/>
 
 </RelativeLayout>
 

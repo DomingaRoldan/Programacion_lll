@@ -31,4 +31,8 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:26.0.0')
     implementation 'com.google.firebase:firebase-database:19.5.1'
     implementation 'com.google.firebase:firebase-auth:20.0.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.0'
+    implementation 'com.firebaseui:firebase-ui-storage:6.4.0'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'androidx.cardview:cardview:1.0.0'
 }

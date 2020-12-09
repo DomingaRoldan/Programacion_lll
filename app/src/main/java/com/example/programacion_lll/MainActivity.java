@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<productos> stringArrayList = new ArrayList<productos>();
     ArrayList<productos> copyStringArrayList = new ArrayList<productos>();
     ListView ltsAmigos;
+    Button button;
 
 
     @Override
@@ -47,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
         });
         obtenerDatosProductos();
         buscarAmigos();
+
+       button = (Button)findViewById(R.id.btnchat);
+       button.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(getApplicationContext(), registro_chat.class);
+               startActivity(intent);
+           }
+       });
 
     }
     @Override
