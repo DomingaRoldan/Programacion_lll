@@ -56,7 +56,7 @@ public class agregarProductos extends AppCompatActivity {
             public void onClick(View v) {
                 takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                    //guardando la imagen
+                    //guardar la imagen
                     File photoFile = null;
                     try {
                         photoFile = createImageFile();
@@ -67,7 +67,7 @@ public class agregarProductos extends AppCompatActivity {
                             takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                             startActivityForResult(takePictureIntent, 1);
                         }catch (Exception ex){
-                            Toast.makeText(getApplicationContext(), "Error Toma Foto: "+ ex.getMessage(),Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Error al tomar la fotografia: "+ ex.getMessage(),Toast.LENGTH_LONG).show();
                         }
                     }
                 }
@@ -128,7 +128,7 @@ public class agregarProductos extends AppCompatActivity {
                 miDB = new DB(getApplicationContext(),"", null, 1);
                 miDB.mantenimientoProducto(accion, data);
 
-                Toast.makeText(getApplicationContext(),"Registro de productos insertado con exito", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"El registro de productos se realizo con exito", Toast.LENGTH_LONG).show();
                 mostrarListaAmigos();
             }
         });

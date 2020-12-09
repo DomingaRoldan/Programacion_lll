@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<productos> stringArrayList = new ArrayList<productos>();
     ArrayList<productos> copyStringArrayList = new ArrayList<productos>();
     ListView ltsAmigos;
+    Button button;
 
 
     @Override
@@ -47,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
         });
         obtenerDatosProductos();
         buscarAmigos();
+
+       button = (Button)findViewById(R.id.btnchat);
+       button.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(getApplicationContext(), registro_chat.class);
+               startActivity(intent);
+           }
+       });
 
     }
     @Override
@@ -73,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                     stringArrayList.clear();
                     if (tempVal.getText().toString().trim().length() < 1) {//no hay texto para buscar
                         stringArrayList.addAll(copyStringArrayList);
-                    } else {//hacemos la busqueda
+                    } else {//se realiza la busqueda
                         for (productos am : copyStringArrayList) {
                             String codigo = am.getCodigo();
                             if (codigo.toLowerCase().contains(tempVal.getText().toString().trim().toLowerCase())) {
@@ -126,20 +137,20 @@ public class MainActivity extends AppCompatActivity {
     AlertDialog eliminarAmigo(){
         AlertDialog.Builder confirmacion = new AlertDialog.Builder(MainActivity.this);
         confirmacion.setTitle(misProdctos.getString(1));
-        confirmacion.setMessage("Esta seguro de eliminar el registro?");
+        confirmacion.setMessage("Esta seguro que quiere eliminar el registro?");
         confirmacion.setPositiveButton("Si", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 miBD.mantenimientoProducto("eliminar",new String[]{misProdctos.getString(0)});
                 obtenerDatosProductos();
-                Toast.makeText(getApplicationContext(), "Amigo eliminado con exito.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "El producto se elimino",Toast.LENGTH_SHORT).show();
                 dialogInterface.dismiss();
             }
         });
         confirmacion.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(getApplicationContext(), "Eliminacion cancelada por el usuario.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "La eliminacion ha sido cancelada",Toast.LENGTH_SHORT).show();
                 dialogInterface.dismiss();
             }
         });
@@ -148,10 +159,10 @@ public class MainActivity extends AppCompatActivity {
     void obtenerDatosProductos(){
         miBD = new DB(getApplicationContext(), "", null, 1);
         misProdctos = miBD.mantenimientoProducto("consultar", null);
-        if( misProdctos.moveToFirst() ){ //hay registro en la BD que mostrar
+        if( misProdctos.moveToFirst() ){ //hay registro en la base de datos para mostrar
             mostrarDatosProductos();
-        } else{ //No tengo registro que mostrar.
-            Toast.makeText(getApplicationContext(), "No hay registros de amigos que mostrar",Toast.LENGTH_LONG).show();
+        } else{ //No hay registro en la base de datos que mostrar.
+            Toast.makeText(getApplicationContext(), "No hay registros de productos que mostrar",Toast.LENGTH_LONG).show();
             agregarAmigo("nuevo", new String[]{});
         }
     }
@@ -173,8 +184,8 @@ public class MainActivity extends AppCompatActivity {
         adaptadorImagenes adaptadorImg = new adaptadorImagenes(getApplicationContext(), stringArrayList);
         ltsAmigos.setAdapter(adaptadorImg);
 
-        copyStringArrayList.clear();//limpiamos la lista de amigos
-        copyStringArrayList.addAll(stringArrayList);//creamos la copia de la lista de amigos...
+        copyStringArrayList.clear();//limpia la lista de productos
+        copyStringArrayList.addAll(stringArrayList);//crear la copia de la lista de productos
         registerForContextMenu(ltsAmigos);
     }
 }
