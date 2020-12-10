@@ -50,7 +50,7 @@ public class registro_chat extends AppCompatActivity {
         imgFoto = findViewById(R.id.imgFoto);
         tomarFoto();
         try {
-            mDatabse = FirebaseDatabase.getInstance().getReference("usuariosDelChat");
+            mDatabse = FirebaseDatabase.getInstance().getReference("usuarios");
             miToken = myFirebaseInstanceIdService.miToken;
             Button btnGuardarRegistro = findViewById(R.id.btnGuardarRegistro);
             btnGuardarRegistro.setOnClickListener(new View.OnClickListener() {
@@ -119,11 +119,11 @@ public class registro_chat extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(), "Erro al intentar crear el registro en la base de datos: "+e.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Error al intentar crear el registro en la base de datos: "+e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
             } else {
-                Toast.makeText(getApplicationContext(), "Erro al intentar crear el registro en la base de datos", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Error al intentar crear el registro en la base de datos", Toast.LENGTH_LONG).show();
             }
         }catch (Exception ex){
 

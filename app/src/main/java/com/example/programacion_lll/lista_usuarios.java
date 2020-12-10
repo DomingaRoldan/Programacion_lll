@@ -60,7 +60,7 @@ public class lista_usuarios extends AppCompatActivity {
         });
     }
     private void mostrarListadoUsuarios(){
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference("usuariosDelChat");
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference("usuarios");
         mDatabaseReference.orderByChild("token").equalTo(myFirebaseInstanceIdService.miToken).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -110,7 +110,7 @@ public class lista_usuarios extends AppCompatActivity {
         });
     }
     private void registrarUsuario(){
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), registro_chat.class);
         startActivity(intent);
     }
 

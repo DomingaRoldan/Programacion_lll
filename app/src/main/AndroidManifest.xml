@@ -15,6 +15,7 @@
         <activity android:name=".IniciarSesion" />
         <activity android:name=".MainActivity" />
         <activity android:name=".agregarProductos" />
+
         <activity android:name=".RegistroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
